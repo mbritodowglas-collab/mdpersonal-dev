@@ -1,10 +1,10 @@
 # =========================
-# Site (produção GitHub Pages)
+# Site (Ambiente de Desenvolvimento)
 # =========================
-title: "Márcio Dowglas Personal Trainer"
-description: "Treino, neurociência e saúde mental — conteúdos práticos."
+title: "Márcio Dowglas Personal Trainer — DEV"
+description: "Ambiente de testes do site MD Personal — treino, neurociência e saúde mental."
 url: "https://mbritodowglas-collab.github.io"   # domínio raiz do GitHub Pages (sem barra final)
-baseurl: "/mdpersonal"                           # subpasta do projeto (com barra inicial, sem barra final)
+baseurl: "/mdpersonal-dev"                      # subpasta do projeto DEV (com barra inicial, sem barra final)
 timezone: "America/Manaus"
 
 # Onde os posts vão sair (URLs bonitas)
@@ -31,19 +31,24 @@ default_af_thumb: "/assets/img/afiliados/thumb-default.jpg"
 shopee_link: "https://shopee.com.br/"
 fithouse_link: "https://www.fithouse.com.br/"
 og_image: "/assets/img/og-default.jpg"
-ga4_id: "G-7LD3B5YK06"
+
+# 🚫 Desativa Google Analytics no DEV
+ga4_id: ""
+
+# 🔒 Evita indexação do dev nos buscadores
+robots_dev: true
 
 # =========================
-# Meta descriptions por página (opcional)
+# Meta descriptions por página (mantidas)
 # =========================
 meta_descriptions:
-  default: "Conteúdos práticos sobre treino, neurociência e comportamento humano — aprenda como transformar corpo e mente com orientações diretas e fáceis de aplicar."
-  home: "Treino, neurociência e mentalidade em um só lugar. Descubra como alcançar resultados reais no corpo e na mente com orientações simples e aplicáveis."
-  blog: "Artigos curtos e diretos sobre treino, neurociência, nutrição e gestão fitness — um bate-papo com base científica para o seu dia a dia."
-  utilitarios: "Acessórios, suplementos e ferramentas recomendadas por Márcio Dowglas — seleções práticas para quem busca evolução com propósito."
-  sobre: "Conheça Márcio Dowglas, personal trainer e criador do MD Personal. Missão: unir treino, mente e comportamento em uma jornada real de evolução."
-  contato: "Fale com Márcio Dowglas — dúvidas sobre treinos, consultorias e programas personalizados baseados em neurociência."
-  artigo_padrao: "Aprenda sobre [tema do post] de forma simples e prática. Entenda como aplicar no treino e na rotina com base em neurociência e comportamento."
+  default: "Versão de testes do site MD Personal. Conteúdos sobre treino, neurociência e comportamento humano."
+  home: "Versão DEV — Treino, neurociência e mentalidade."
+  blog: "Artigos de treino, neurociência e nutrição (ambiente de testes)."
+  utilitarios: "Página de utilitários e ferramentas — versão de desenvolvimento."
+  sobre: "Sobre Márcio Dowglas (DEV)."
+  contato: "Contato (teste de ambiente)."
+  artigo_padrao: "Artigo de exemplo no ambiente DEV."
 
 # =========================
 # Plugins (whitelist do GitHub Pages)
