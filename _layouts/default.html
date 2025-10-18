@@ -9,11 +9,18 @@
   <!-- Meta description -->
   <meta name="description"
         content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
-  <meta name="robots" content="index,follow" />
+
+  <!-- Robots (dinâmico: DEV = noindex) -->
+  {% if site.robots_dev %}
+    <meta name="robots" content="noindex,nofollow" />
+  {% else %}
+    <meta name="robots" content="index,follow" />
+  {% endif %}
+
   <meta name="theme-color" content="#0b0b0b" />
   <meta name="color-scheme" content="dark light" />
 
-  <!-- Canonical -->
+  <!-- Canonical (corrigido: relative_url -> absolute_url) -->
   <link rel="canonical" href="{{ page.url | relative_url | absolute_url }}" />
 
   <!-- CSS principal -->
@@ -25,7 +32,7 @@
   <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
   <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
 
-  <!-- Feed RSS (corrigido para respeitar o baseurl) -->
+  <!-- Feed RSS (respeita baseurl) -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url | absolute_url }}">
 
   <!-- Open Graph / Twitter -->
@@ -40,7 +47,7 @@
   <meta name="twitter:description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 180 }}">
   <meta name="twitter:image" content="{{ page.image | default: site.og_image | default: '/assets/img/og-default.jpg' | relative_url | absolute_url }}">
 
-  <!-- JSON-LD: Breadcrumbs para posts (corrigido: usa relative_url antes de absolute_url) -->
+  <!-- JSON-LD: Breadcrumbs (apenas em posts) -->
   {% if page.layout == 'post' %}
   <script type="application/ld+json">
   {
@@ -52,6 +59,17 @@
       { "@type": "ListItem", "position": 3, "name": "{{ page.title | escape }}", "item": "{{ page.url | relative_url | absolute_url }}" }
     ]
   }
+  </script>
+  {% endif %}
+
+  <!-- GA4 (só carrega se houver ID) -->
+  {% if site.ga4_id and site.ga4_id != "" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.ga4_id }}');
   </script>
   {% endif %}
 </head>
@@ -78,5 +96,15 @@
       <a href="https://youtube.com/@centrodeneurotreinamento" target="_blank" rel="noopener">@centrodeneurotreinamento</a>
     </p>
   </footer>
+
+  <!-- Badge de ambiente DEV (opcional) -->
+  {% if site.env == "dev" %}
+  <style>
+    .dev-badge{position:fixed;right:10px;bottom:10px;background:#7c3aed;color:#fff;
+      padding:.35rem .6rem;border-radius:8px;font:600 12px/1.1 ui-sans-serif,system-ui;
+      opacity:.9;z-index:9999}
+  </style>
+  <div class="dev-badge">DEV</div>
+  {% endif %}
 </body>
 </html>
