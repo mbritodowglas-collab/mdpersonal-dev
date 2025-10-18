@@ -14,6 +14,7 @@ permalink: /blog/:title/
 # Build
 # =========================
 markdown: kramdown
+future: true            # ✅ Mostra posts com data futura no DEV (ótimo p/ testes)
 
 # Layout padrão para posts
 defaults:
@@ -35,11 +36,14 @@ og_image: "/assets/img/og-default.jpg"
 # 🚫 Desativa Google Analytics no DEV
 ga4_id: ""
 
-# 🔒 Evita indexação do dev nos buscadores
+# 🔒 Evita indexação do DEV nos buscadores (use no layout default)
 robots_dev: true
 
+# Marca ambiente (se quiser usar em condicionais nos layouts)
+env: "dev"
+
 # =========================
-# Meta descriptions por página (mantidas)
+# Meta descriptions por página (mantidas / versão DEV)
 # =========================
 meta_descriptions:
   default: "Versão de testes do site MD Personal. Conteúdos sobre treino, neurociência e comportamento humano."
