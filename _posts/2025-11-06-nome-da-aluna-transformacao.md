@@ -25,32 +25,23 @@ excerpt: "Da falta de tempo à rotina equilibrada — a jornada real de uma mulh
 > “A melhor parte não foi ver o peso descer, foi sentir meu corpo responder.  
 > Dormir melhor, ter mais energia e me sentir orgulhosa por cumprir o que prometi pra mim mesma.”
 
+> “Eu aprendi a ter paciência comigo.  
+> A respeitar o processo e entender que cada treino era uma vitória.  
+> Essa jornada me mostrou que a constância é mais importante que a pressa.”
+
 ---
 
 ## 📸 Resultado Visual
 
 <figure class="result-photo">
   <img src="/assets/img/resultados/ana-progresso.jpg" alt="Evolução de Ana durante o acompanhamento" loading="lazy">
-  <figcaption>Progresso da Ana — consistência em 12 semanas de treino orientado.</figcaption>
+  <figcaption>Progresso da Ana — constância e disciplina em 12 semanas de treino.</figcaption>
 </figure>
 
 ---
 
-## 📊 Comparativo de Evolução
-
-| Indicador | Início | Atual | Diferença |
-|------------|--------|--------|-----------|
-| Peso corporal | 71,2 kg | 63,5 kg | **–7,7 kg** |
-| Cintura | 80 cm | 72 cm | **–8 cm** |
-| Agachamento livre | 20 kg | 45 kg | **+125% força** |
-| Dor lombar | Frequente | Rara | **–80% sintomas** |
-
----
-
-## ⚡ Conclusão
-
-> “Hoje eu sei que não era sobre tempo, era sobre prioridade.  
-> Aprendi que constância é o que transforma — e que dá pra cuidar da mente e do corpo sem pressa.”
+> “Hoje eu treino porque quero, não porque preciso.  
+> Descobri uma força que eu nem sabia que existia — e ela mudou tudo.”
 
 ---
 
@@ -71,19 +62,11 @@ excerpt: "Da falta de tempo à rotina equilibrada — a jornada real de uma mulh
   color:#ccc;
   margin-top:8px;
 }
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin:20px 0;
-}
-table td,table th{
-  border:1px solid #2a2a2a;
-  padding:8px 10px;
-  color:#ddd;
-}
-table th{
-  background:#1a1a1a;
-  color:#f6d6ce;
-  text-align:left;
+blockquote{
+  border-left:3px solid #d4af37;
+  margin:14px 0;
+  padding-left:14px;
+  font-style:italic;
+  color:#eee;
 }
 </style>
