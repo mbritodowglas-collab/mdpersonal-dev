@@ -1,0 +1,1 @@
+Area para imagens de resultados
