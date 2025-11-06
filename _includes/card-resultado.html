@@ -1,0 +1,20 @@
+{%- assign p = include.post -%}
+<article class="result-card">
+  <a href="{{ p.url | relative_url }}" class="result-thumb" aria-label="{{ p.title | escape }}">
+    <img loading="lazy" decoding="async"
+         src="{{ (p.thumb | default: '/assets/img/resultados/placeholder.jpg') | relative_url }}"
+         alt="{{ p.title | escape }}">
+    {%- if p.badge -%}<span class="result-badge">{{ p.badge }}</span>{%- endif -%}
+  </a>
+  <div class="result-body">
+    <h2 class="result-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h2>
+    <div class="result-meta">
+      {%- if p.aluno -%}<span>Aluno(a): <strong>{{ p.aluno }}</strong></span>{%- endif -%}
+      {%- if p.idade -%}<span>Idade: <strong>{{ p.idade }}</strong></span>{%- endif -%}
+      {%- if p.cidade -%}<span>Cidade: <strong>{{ p.cidade }}</strong></span>{%- endif -%}
+      {%- if p.tempo -%}<span>Programa: <strong>{{ p.tempo }}</strong></span>{%- endif -%}
+    </div>
+    <p class="result-excerpt">{{ p.excerpt | default: p.content | strip_html | truncate: 140 }}</p>
+    <a class="result-cta" href="{{ '/avaliacao/' | relative_url }}">Quero meu resultado</a>
+  </div>
+</article>
